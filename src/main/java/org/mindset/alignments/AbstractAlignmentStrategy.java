@@ -21,11 +21,11 @@ public abstract class AbstractAlignmentStrategy implements TextAlignmentStrategy
         for (int index = 0; index < words.length;) {
             final String word = words[index];
             if (word.length() > outputWidth) {
-                throw new IllegalArgumentException(String.format("Word %s is longer than the output-width %", word, outputWidth));
+                throw new IllegalArgumentException(String.format("Word %s is longer than the output-width %d", word, outputWidth));
             }
             final StringBuilder line = new StringBuilder(word);
             index++;
-            while(index < words.length && line.length() + words[index].length() + padding.length() < outputWidth) {
+            while(index < words.length && line.length() + words[index].length() + padding.length() <= outputWidth) {
                 line.append(padding + words[index]);
                 index++;
             }
