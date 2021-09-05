@@ -20,6 +20,8 @@ public class DataReader implements Closeable {
 
     @Override
     public void close() throws IOException {
-        scanner.close();
+        if (scanner != null) {
+            scanner.close();
+        }
     }
 }
