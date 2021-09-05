@@ -33,6 +33,13 @@ public class CenterAlignmentStrategyTest {
     }
 
     @Test
+    public void emptyString() {
+        final CenterAlignmentStrategy alignmentStrategy = new CenterAlignmentStrategy(2);
+        final String output = alignmentStrategy.format("");
+        assertEquals("  ", output);
+    }
+
+    @Test
     public void outputWidth_IsEqualTo_WordLength() {
         final CenterAlignmentStrategy alignmentStrategy = new CenterAlignmentStrategy(2);
         final String output = alignmentStrategy.format("aa");

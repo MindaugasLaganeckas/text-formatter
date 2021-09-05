@@ -22,6 +22,13 @@ public class LeftAlignmentStrategyTest {
     }
 
     @Test
+    public void emptyString() {
+        final LeftAlignmentStrategy alignmentStrategy = new LeftAlignmentStrategy(2);
+        final String output = alignmentStrategy.format("");
+        assertEquals("  ", output);
+    }
+
+    @Test
     public void outputWidth_SmallerThan_WordLength() {
         final LeftAlignmentStrategy alignmentStrategy = new LeftAlignmentStrategy(1);
         try {
