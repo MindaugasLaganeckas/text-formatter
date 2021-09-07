@@ -1,3 +1,5 @@
+[![Maven Buil and Test](https://github.com/MindaugasLaganeckas/text-formatter/actions/workflows/maven-ci.yml/badge.svg)](https://github.com/MindaugasLaganeckas/text-formatter/actions/workflows/maven-ci.yml)
+
 # text-formatter
 A small tool for formatting text
 
